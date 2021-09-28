@@ -1,0 +1,658 @@
+/* geral */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden; /* Esconder barra de rolagem horizontal */
+    
+}
+
+.pag_index{
+    width: 100%;
+    height: 100%;
+    position: absolute;  /*se posiciona ignorando outros elementos */
+}
+
+
+/* inicio containers */
+.header {
+    width: 68%;
+    margin: auto;
+    /* background-color: grey; */
+    
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    z-index:1000;
+    position: relative;  /* se posiciona respeitando os outros elementos */
+    /* background-color: red; */
+    
+}
+
+.container2{
+    width: 80%;
+    margin: auto;
+}
+/* fim containers */
+
+
+/* inico fundos */
+.fundo_blue{
+    background-image: url(./img/fundo.png);
+    background-size: cover;
+    width: 100%;
+    height: 95%;
+    position: relative;
+}
+
+.fundo_grey{
+    margin-top: 50px;
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.fundo_white{
+    margin-top: 50px;
+    background-color:white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.fundo_login{
+    background-image: url(./img/fundo.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
+/* fim fundos */
+
+
+/* inicio img fundo_blue */
+.img_bombeiro{
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.img_extintor{
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}    
+/* fim img fundo_blue */
+
+
+/* botoes fundo_blue */
+.botoes a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.botoes {
+    text-align: center;
+    padding-top: 25px;
+}
+/* fim botoes fundo_blue*/
+
+
+/* botao login */
+.botao_login{
+    border: none;
+    cursor: pointer;
+    float: right;
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 12px 18px;
+    margin-top: 18px;   
+    background-color: white;
+    color: black;   
+}
+/* fim */
+
+
+/* logo inicio */
+.container img{
+    width: 50px;
+    float: left;
+    margin-top: 10px;    
+}
+
+.container h1{
+    float: left;
+    font-size: 25px;
+    margin-top: 16px;
+    margin-left: 5px;
+    color: white;
+}
+/* fim */
+
+
+/* titulo centro */
+.header h1 {
+    font-size: 56px;
+    padding-top: 125px;  
+    float: none;
+    text-align: center; 
+    margin-bottom: 40px;
+} 
+/* fim */
+
+
+/* subtitulo centro */
+.centro{
+    text-align: center;
+    /* background-color: tomato; */
+}
+
+.subtitulo{
+    font-size: 18px;
+    color: white;
+}
+/* fim */
+
+
+/* botão centro */
+.button_black{
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 16px 35px;   
+    background-color:black;
+    color:white;  
+    margin-top: 10%; 
+    width: 50%;
+    
+ 
+}
+
+.header button img{
+    width: 30px;
+    margin-top: 0;
+    float: left;
+}
+
+.img_black{
+    padding-top: 5px;
+}
+
+.text_button{
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* .button_white{
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 16px 40px;   
+    background-color: white;
+    color:black;  
+    margin-top: 30px; 
+    width: 350px;
+    float: left;
+    margin-left: 60px;
+} */
+/* botao centro fim */
+
+
+/* nuvens de cima inicio */
+.nuvem1{
+    position: absolute;
+    top: 100px;
+    background: transparent;
+    width: 100px;
+    animation: nuvem1 75s linear infinite;
+ }
+ 
+ @keyframes nuvem1{
+    from {left: -10%}
+    to {left: 100%}
+ }
+
+
+
+.nuvem2{
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+    width: 500px;
+    animation: nuvem2 75s linear infinite;
+    
+ }
+ 
+ @keyframes nuvem2{
+    from {left: -20%}
+    to {left: 100%}
+ }
+ /* nuvens de cima fim */
+
+
+/* nuvem de baixo inicio */
+ .nuvem3{
+    position: absolute;
+    top: 100px;
+    background: transparent;
+    width: 150px;
+    animation: nuvem3 100s linear infinite;
+ }
+ 
+ @keyframes nuvem3{
+    from {left: -60%}
+    to {left: 100%}
+ }
+ /* nuvem de baixo fim */
+
+
+/* part2 inicio */
+.part2_img {
+    margin-top: 150px;
+    position: absolute;
+    left: 0;
+    width: 700px;
+
+}
+
+.part2_img img{
+    width: 650px;
+}
+
+.part2_text{
+    margin-top: 100px;
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background-color: tomato;
+
+}
+
+.part2_text h3{
+    position: absolute;
+    left: 0;
+    font-size: 48px;
+}
+
+.part2_text span{
+    position: absolute;
+    left: 0;
+    text-align: left;
+    font-size: 18px;
+    padding-top: 320px;
+    
+}
+/* part2 fim */
+
+
+
+ /* ondas inicio */
+ .wave_grey{
+    position: absolute;
+    top: -18%;
+    scroll-padding-bottom: 50px;;
+    background: transparent;
+    width: 100%;
+    animation: anima_wave 100s linear infinite ;
+ }
+ 
+ @keyframes anima_wave {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+ 
+.wave_grey2{
+    position: absolute;
+    top: -18%;
+    scroll-padding-bottom: 50px;
+    background: transparent;
+    width: 100%;
+    animation: anima_wave2 100s linear infinite ;
+ }
+ 
+ @keyframes anima_wave2 {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.wave_white{
+    position: absolute;
+    top: -21%;
+    scroll-padding-bottom: 50px;;
+    background: transparent;
+    width: 100%;
+    animation: anima_wave 100s linear infinite ;
+
+   
+ }
+ 
+ 
+.wave_white2{
+    position: absolute;
+    top: -21%;
+    scroll-padding-bottom: 50px;
+    background: transparent;
+    width: 100%;
+    animation: anima_wave2 100s linear infinite ;
+    
+
+ }
+/* ondas fim */
+
+
+/* PART3 inicio */
+.part3_img {
+    margin-top: 75px;
+    position: absolute;
+    right: 0;
+    width: 700px;
+
+}
+
+.part3_img img{
+    position: absolute;
+    right: 0;
+    width: 550px;
+}
+
+.part3_text{
+    margin-top: 75px;
+    position: absolute;
+    left: 0;
+    width: 400px;
+    margin-left: 50px;
+
+}
+
+.part3_text h3{
+    position: absolute;
+    left: 0;
+    font-size: 48px;
+    
+}
+
+.part3_text span{
+    position: absolute;
+    left: 0;
+    text-align: left;
+    font-size: 18px;
+    padding-top: 320px;
+    
+}
+/* part3 fim */
+
+
+ 
+    
+ /* inicio itens */
+ .box{
+    text-align: center;
+}
+
+.box-item{
+    display: inline-block;
+    width: 32%;
+}
+
+.box-item img{
+    width: 100px;
+}
+
+.box-item img{
+    margin-top: 100px;
+}
+
+.box-item h3, .box-item p{
+    margin-top: 15px;
+}
+ /* fim itens */
+ 
+ .button_grey{
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 20px;
+    padding: 16px 40px;   
+    background-color: #ebe9e9;
+    color:black;  
+    margin-top: 10%; 
+    width: 50%;
+
+    
+}
+ 
+
+
+/* formulario */
+#form-login{
+    width: 365px;
+    height: 365px;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 10%;
+    padding-top: 5%;
+    background-color: #ebe9e9;
+    border-radius: 15px;
+}
+
+#form-login h1{
+    text-align: center;
+    padding-top: 5%;
+}
+
+
+ 
+#form-login input{
+    
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 6px 0 12px;
+}
+
+#form-login a{
+    color:black;
+}
+
+.text_cadastro{
+    position: relative;
+    left: 10%;
+    top: 5%;
+    font-size: 14px;
+
+}
+
+.text_esqueceu_senha{
+    position: relative;
+    left: 33%;
+    top: 5%;
+    font-size: 14px;
+}
+
+.exit{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    text-decoration: none;
+}
+/* formulario fim */
+
+
+/* pag login inicio */
+.button_black_entrar{
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+
+    
+     
+    background-color: black;
+    color:white; 
+    width: 65%;
+    height: 40px;
+    margin: auto; 
+    margin-top: 10%;
+    margin-left: 17.5%; 
+    
+}
+
+.box_login{
+    width: 40%;
+    height: 365px;
+    position: absolute;
+    top: 20%;
+    z-index: 9999;
+    left: 30%;
+    padding-top: 10%;
+    
+}
+/* pag login fim */
+
+.fundo_filter{
+    background-image: url(./img/fundo.png);
+    background-size: cover;
+    width: 100%;
+    height: 625px;
+    position: relative;
+    filter: brightness(70%);
+}
+
+/* .border_select{
+    border-bottom: solid white 1px;
+    
+} */
+
+/* 
+#form-login img{
+    width: 100px;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+
+} */
+
+
+
+/*     border: 3px solid #000;
+    border-radius: 5px;
+    height: 50px;
+    padding 0 6px 0 12px */
+
+
+    /* transition: transform .2s;
+    transform: translateZ(0); */
+
+
+    /* .fadeIn {
+    animation: fadeIn 1s linear;
+}
+@keyframes fadeIn {
+    from{ opacity: 0;
+    }
+    to{ opacity: 1; 
+    }
+} */
+
+/* login */
+
+
+/* formulario */
+
+
+/* #form-login{
+    width: 40%;
+    height: 365px;
+    position: absolute;
+    z-index: 9999;
+    left: 30%;
+    padding-top: 10%;
+}
+
+#form-login h1{
+    text-align: center;
+    padding-top: 45px;
+}
+
+
+ 
+#form-login input{
+    
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 6px 0 12px;
+} */
+
+
+#form-sigin{
+    width: 365px;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 10%;
+    padding-top: 5%;
+    background-color: #ebe9e9;
+    border-radius: 15px;
+}
+
+#form-sigin h1{
+    text-align: center;
+    padding-top: 5%;
+}
+
+
+ 
+#form-sigin input{
+    
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 6px 0 12px;
+}
+
+#form-sigin a{
+    color:black;
+}
