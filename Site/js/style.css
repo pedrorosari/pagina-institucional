@@ -1,0 +1,80 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+body{
+  width: 100%;
+  height: 100%;
+}
+
+.menu-principal{
+
+  width: 100%;
+  background-color:rgb(22, 18, 18);
+  height: 60px;
+}
+
+main{
+  margin: 0 auto;
+  width: 100%;
+ position: relative;
+}
+
+.Logo{
+     margin-top: 0px;
+     background-color:rgb(22, 18, 18);  
+     float: left;
+     margin-left: 150px;
+     width: 45%;
+}
+
+.Logo img{
+  margin-left: 30px;
+}
+.redes-sociais ul li{
+  margin-left: 20px;  /*Espaço entre os logos*/
+  display: inline-block;
+  
+}
+
+.redes-sociais{
+  width: 32%;
+  float: right;
+  padding-bottom: 15px;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.header-2{
+  background-color: #ffff;
+  width: 100%;
+  border-bottom: 3px solid #efefef;
+}
+.menu ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.menu ul li{
+  display: inline-block;
+  color: #8b8b8b;
+  text-decoration: none;
+  margin-left: 100px;
+  height: 22px;
+}
+.menu ul li:hover{
+border-bottom: 3px solid #9489f5; /*Animação ao passar em cima na sombra*/
+}
+.menu ul li a:hover{
+  color: #9489f5;   /*Animação ao passar em cima nas letras*/
+}
+
+.menu ul li a{
+  color: #8b8b8b;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  
+}
+.menu{
+  margin: 10px 0px 0px 100px
+}
