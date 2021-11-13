@@ -1,2 +1,2 @@
 # pagina-institucional
-Págkina Institucional da BandTec
+Página Institucional da BandTec
