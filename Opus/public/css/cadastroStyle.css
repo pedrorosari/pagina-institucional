@@ -1,0 +1,129 @@
+.body-cadastro .navbar{  
+  position: relative; /*Permite posicionar o objeto*/
+}
+
+
+
+.conteudo-cadastro{
+  height: 100vh; /*Altura*/
+  display: flex; /*Permite um layout flexível, reorganizando de acordo com a necessidade.*/
+  justify-content: center; /*Centraliza os itens horizontalmente*/
+  align-items: center;
+}
+  
+.body-cadastro  input{
+  color: #000; /*Cor da fonte*/
+}
+  
+.body-cadastro input:focus, label:focus{
+  outline: none; /**/
+}
+    
+.body-cadastro #agreement-label a{
+  color: #3ea7c7; /*Cor da fonte*/
+  text-decoration: underline; /*Decora o texto com uma linha embaixo*/
+}
+    
+.body-cadastro{
+  margin: 0; /*Margem externa*/
+  padding: 0;  /*Margem interna*/
+  background-color: #EFEFEF; /*Colore o fundo*/
+}
+  
+.body-cadastro .conteudo-cadastro .container {
+  width: 1140px; /*Largura*/
+  padding: 0 20px;/*Margem interna*/
+}
+  
+.body-cadastro .container h1 {
+  color: #156E89; /*Cor da fonte*/
+  text-align: center; /*Alinha o texto no centro*/
+  margin-bottom: 1.6em; /*Margem externa inferior*/
+  margin-top: 0; /*Margem externa superior*/
+  font-size: 1.5rem; /*Tamanho da fonte*/
+}
+  
+.body-cadastro form {
+  display: flex; /*Permite um layout flexível, reorganizando de acordo com a necessidade.*/
+  flex-wrap: wrap; /*Permite que os itens quebrem linha*/
+}
+  
+.body-cadastro .div-geral {
+  width: 100%; /*Largura*/
+  text-align: center; /*Alinhamento do texto*/
+  display: flex;
+  justify-content: center;
+}
+
+.body-cadastro .linha-form{
+  width: 100%;  /*Largura*/
+  display: flex; /*Permite um layout flexível, reorganizando de acordo com a necessidade.*/
+  justify-content: space-between; /*Posiciona os objetos na extremidades e distribui suas margens igualmente*/
+}
+  
+.body-cadastro .metade{
+  display: flex; /*Permite um layout flexível, reorganizando de acordo com a necessidade.*/
+  width: 48%; /*Largura*/
+  margin-bottom: 5%; /*Margem exterior inferior*/
+  flex-direction: column; /*Posiciona os objetos em colunas*/
+}
+
+
+.body-cadastro .metade.metade-final{
+  margin-bottom: 1%; /*Margem externa inferior*/
+}
+  
+.body-cadastro .metade .ipt_ultimo{
+  margin-bottom: 20px; /*Margem externa inferior*/
+}
+  
+.body-cadastro label {
+  font-size: 17px; /*Tamanho da fonte*/
+  color: #151515; /*Cor da fonte*/
+  margin-left: 8px; /*Margem externa lateral esquerda*/
+}
+  
+.body-cadastro input {
+  width: 100%; /*Largura*/
+  border:none; /*Borda*/
+  font-weight: 300; /*Espessura da fonte*/
+  font-size: 0.9em; /*Tamanho da fonte*/
+  background-color: #FFFFFF00; /* Cord de fundo*/
+  border-bottom: 1px solid #00000040; /*Borda inferior*/
+  padding: 8px; /*Margem interna*/
+  letter-spacing: 0.07em; /*Espaçamento da fonte*/
+}
+  
+.body-cadastro input:focus {
+  border-color: #156E89; /*Cor da borda*/
+}
+  
+.body-cadastro input::placeholder{
+  color: #BEBEBE; /*Cor da fonte*/
+  font-size: 1em;/*Tamanho da fonte*/
+}
+
+  
+.body-cadastro .btn-cadastro{
+  width: 40%; /*Largura*/
+  color: #fff; /*Cor da fonte*/
+  font-weight: 500; /* Espessura da fonte*/
+  font-size: 18px; /* Tamanho da fonte*/
+  line-height: 21px; /*Altura entra as linhas*/
+  letter-spacing: 0.02em; /*Espaçamento da fonte*/
+  border: none; /* Borda*/
+  height: 42px; /*Altura*/
+  background: linear-gradient(90deg, #24A4A5 0%, #156E89 78.46%); /* Fundo com cor em gradiente*/
+  border-radius: 50px; /* Borda arredondada*/
+  cursor: pointer; /* Forma do cursor*/
+  margin: 40px 10px; /* Margem externa*/
+}
+
+
+.body-cadastro #agreement {
+  margin-right: 5px; /* Marhem externa lateral direita*/
+}
+  
+.body-cadastro #agreement, #agreement-label {
+  width: auto; /* Largura*/
+}

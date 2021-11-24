@@ -1,0 +1,80 @@
+@font-face{
+  font-family: run;
+  src: url("../fonts/run\ \(2\).ttf")
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo 2", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  background-color:#f0f0f0;
+}
+
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+
+.navbar {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+
+
+}
+.header {
+  color: #32b9cd;
+ 
+ 
+}
+.header h1{
+  font-family: run;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  /* border: 3px solid pink; */
+
+}
+
+.header a {
+  text-decoration: none;
+  color: #1e0161;
+  text-transform: uppercase;
+}
+
+.header a:hover{
+  border-bottom: solid 3px #4faf98;
+}
+
+.header .login{
+border: solid 1px #4faf98;
+padding: 8px;
+}
+
+.header .login:hover{
+  background-color: #4faf98;
+  color: white;
+}
+
+.agora {
+  font-weight: 800;
+  text-decoration: none;
+  color: #1e0161;
+  text-transform: uppercase;
+}
+.header a :hover{
+  text-decoration: none;
+  color: #1e0161;
+  text-transform: uppercase;
+}
+
+
+/* LOGIN */
+
