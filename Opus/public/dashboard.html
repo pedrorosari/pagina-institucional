@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
 
-  <link rel="stylesheet" href="./css/" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  
 
   <!--
       script que incorpora um arquivo javascript externo, onde passamos o src (source - fonte) 
@@ -29,7 +30,7 @@
 
   <div class="dash-container">
     <!-- Farol de temperatura -->
-    <div class="graph">
+   <!--  <div class="graph">
       <div class="box red">
         <h1>00°</h1>
         <h3>STATUS</h3>
@@ -45,17 +46,17 @@
         <h3>STATUS</h3>
         <p>Descrição do status</p>
       </div>
-    </div>
+    </div> -->
 
     <!-- Gráfico de Linhas -->
-    <div class="graph">
+   <!--  <div class="graph">
       <canvas id="chartLine" style="width: 100%; height: 100%;"></canvas>
     </div>
-
+ -->
     <!-- Gráfico de Barras -->
-    <div class="graph">
+  <!--   <div class="graph">
       <canvas id="chartBar" style="width: 100%; height: 100%;"></canvas>
-    </div>
+    </div> -->
 
     <!-- Grafico Pizza/Torta -->
     <div class="graph">
@@ -137,7 +138,7 @@
   */
 
   // gráfico de Linha
-  var ctxLine = document.getElementById("chartLine").getContext("2d");
+ /*  var ctxLine = document.getElementById("chartLine").getContext("2d");
   var rotulosLine = ["07:00", "10:00", "13:00", "16:00", "19:00", "22:00"];
   var dataLine = [21, 23, 27, 19, 20, 19];
   var configLine = {
@@ -182,9 +183,9 @@
       }
     }
   }
-  var ax_chartLine = new Chart(ctxLine, configLine); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
-
-
+  var ax_chartLine = new Chart(ctxLine, configLine); // criando  *//* o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
+ */
+/* 
   // gráfico de Barras
   var ctxBar = document.getElementById("chartBar").getContext("2d");
   var rotulosBar = ["colisa", "tetra", "coridora", "molinésia", "arco-íris", "betta"];
@@ -232,12 +233,12 @@
     }
   }
   var ax_chartBar = new Chart(ctxBar, configBar); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
-
+ */
 
   // gráfico de Pizza/Torta
   var ctxPie = document.getElementById("chartPie").getContext("2d");
   var rotulosPie = ["jovem", "adulto", "idoso"];
-  var dataPie = [153, 60, 17];
+  var dataPie = [];
   var configPie = {
     type: 'pie',
     data: {
@@ -280,7 +281,41 @@
       }
     }
   }
-  var ax_chartPie = new Chart(ctxPie, configPie); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
+  
+  
+  fetch("/usuarios/ultimasIdade", { cache: 'no-store' }).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (resposta) {
+        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                  // alert(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                  resposta.reverse();
+                  
+                  var jovem = 0;
+                  var adulto = 0;
+                  var idoso = 0;
+                  
+                  for(var i = 0; i < resposta.length; i++){
+                    if(+resposta[i].idade < 18){
+                      jovem++
+                    }else if(+resposta[i].idade >= 18 && resposta[i].idade < 60){
+                      adulto++
+                    }else{
+                      idoso++
+                    }
+                  }
 
+                  configPie.data.datasets[0].data.push(jovem, adulto, idoso);
 
+                  var ax_chartPie = new Chart(ctxPie, configPie); 
+
+              });
+          } else {
+              console.error('Nenhum dado encontrado ou erro na API');
+            }
+      })
+          .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+          });
+
+// criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
 </script>
