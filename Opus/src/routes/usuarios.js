@@ -24,8 +24,8 @@ router.get("/ultimasIdade", function (req, res) {
     usuarioController.buscarUltimasMedidasIdade(req, res);
 });
 
-router.get("/tempo-realIdade", function (req, res) {
-    usuarioController.buscarMedidasEmTempoRealIdade(req, res);
+router.get("/Cidade", function (req, res) {
+    usuarioController.buscarCidade(req, res);
 })
 
 module.exports = router;

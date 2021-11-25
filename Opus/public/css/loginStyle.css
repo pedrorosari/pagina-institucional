@@ -3,78 +3,106 @@
   src: url("../fonts/run\ \(2\).ttf")
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: "Exo 2", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  background-color:#f0f0f0;
-}
-
-
-.container {
-  width: 80%;
-  margin: auto;
-}
-
-
-.navbar {
-  width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  list-style: none;
-
-
-}
-.header {
-  color: #32b9cd;
- 
- 
-}
-.header h1{
-  font-family: run;
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  /* border: 3px solid pink; */
-
-}
-
-.header a {
-  text-decoration: none;
-  color: #1e0161;
-  text-transform: uppercase;
-}
-
-.header a:hover{
-  border-bottom: solid 3px #4faf98;
-}
-
-.header .login{
-border: solid 1px #4faf98;
-padding: 8px;
-}
-
-.header .login:hover{
-  background-color: #4faf98;
-  color: white;
-}
-
-.agora {
-  font-weight: 800;
-  text-decoration: none;
-  color: #1e0161;
-  text-transform: uppercase;
-}
-.header a :hover{
-  text-decoration: none;
-  color: #1e0161;
-  text-transform: uppercase;
+  box-sizing: border-box;
+  font-family:Helvetica;
+  color: #323232;
+  border: none;
 }
 
 
 /* LOGIN */
+body{
+  background-image: url(../assets/sean-pollock-PhYq704ffdA-unsplash\ \(1\).jpg);
+  background-size: cover;
+  background-position-y: -100px ;
+}
 
+textarea:focus, input:focus{
+  outline: none;
+}
+
+a{
+  font-size: .8rem;
+}
+
+a:hover{
+  color: #085588;
+
+}
+
+/* Container login */
+
+.login-container{
+  background-color: #fff;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  margin-top: 10vh;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* formulário */
+
+.login{
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+}
+
+label, input{
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+label{
+  font-weight: bold;
+  
+}
+
+input{
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 1.rem;
+  margin-bottom: 20px;
+
+}
+
+input:focus{
+  border-bottom: 2px solid #085588;
+}
+
+button{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  color: #fff;
+  background-color: #085588;
+  cursor: pointer;
+  margin-bottom: 40px;
+  
+}
+
+button:hover{
+  background-color: #1b223c;
+  transition: .5s;
+
+}
+
+/* registro */
+
+.register-container p{
+  margin-bottom: 10px;
+
+}

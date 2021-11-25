@@ -1,25 +1,26 @@
 var database = require("../database/config")
 
-function buscarMedidasEmTempoRealIdade() {
+/* function buscarMedidasEmTempoRealIdade() {
     instrucaoSql = `select count(idade) as qtdIdade, idade from usuario group by nome;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
-}
+} */
 
 function buscarUltimasMedidasIdade() {
     instrucaoSql = `
         select count(idade) as qtdIdade, idade from usuario group by nome;
     `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
 
-    /* select 
-                        temperatura, 
-                        umidade, 
-                        momento,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from medida
-                    where fk_aquario = ${idAquario}
-                    order by id desc limit ${limite_linhas} */;
+    function buscarCidade() {
+        instrucaoSql = `
+            select count(cidade) as qtdCidade, cidade from usuario group by nome;
+        `;
+
+    
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
 }
@@ -42,10 +43,10 @@ function entrar(email, senha) {
     return database.executar(instrucao);
 }
 
-function cadastrar(nome, email, senha) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
+function cadastrar(nome, email, senha, idade, cidade) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha, idade, cidade);
     var instrucao = `
-        INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
+        INSERT INTO usuario (nome, email, senha, idade, cidade) VALUES ('${nome}', '${email}', '${senha}', '${idade}'  , '${cidade}');
 
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
@@ -58,5 +59,5 @@ module.exports = {
     cadastrar,
     listar,
     buscarUltimasMedidasIdade,
-    buscarMedidasEmTempoRealIdade,
+    buscarCidade,
 };

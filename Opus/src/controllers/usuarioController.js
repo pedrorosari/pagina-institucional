@@ -19,12 +19,11 @@ function buscarUltimasMedidasIdade(req, res) {
     });
 }
 
+function buscarCidade(req, res) {
 
-function buscarMedidasEmTempoRealIdade(req, res) {
+    console.log(`Recuperando as ultimas cidades`);
 
-    console.log(`Recuperando medidas em tempo real`);
-
-    usuarioModel.buscarMedidasEmTempoRealIdade().then(function (resultado) {
+    usuarioModel.buscarCidade().then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -100,6 +99,9 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;       /* Requerimento */
     var senha = req.body.senhaServer;
+    var idade = req.body.idadeServer;
+    var cidade = req.body.cidadeServer;
+
    
 
     if (nome == undefined) {
@@ -110,7 +112,7 @@ function cadastrar(req, res) {
         res.status(400).send("Sua senha está undefined!");
     } else {
         
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha, idade, cidade)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -134,5 +136,5 @@ module.exports = {
     listar,
     testar,
     buscarUltimasMedidasIdade,
-    buscarMedidasEmTempoRealIdade,
+    buscarCidade,
 }

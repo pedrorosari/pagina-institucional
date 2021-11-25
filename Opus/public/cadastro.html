@@ -67,6 +67,17 @@
                             <input id="confirmacao_senha_input" type="password" placeholder="Confirme sua senha">
                         </div>
                     </div>
+                    <div class="linha-form">
+                        <div class="metade">
+                            <label for="Idade">Idade</label>
+                            <input id="idade_input" type="number" placeholder="Insira sua idade">
+                        </div>
+                        <div class="metade">
+                            <label for="Estado">Estado</label>
+                            <input id="cidade_input" type="text" placeholder="Informe seu Estado (Sigla)">
+                        </div>
+                    </div>
+                    <div class="linha-form">
                   
                     <div class="div-geral">
                         <button class="btn btn-cadastro" onclick="cadastrar()">Cadastrar</button>
@@ -96,9 +107,11 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var idadeVar = idade_input.value;
+        var cidadeVar = cidade_input.value;
 
         
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || idadeVar == "" || cidadeVar == "") {
 
             window.alert("Preencha todos os campos para prosseguir!");
             if (nomeVar == "") {
@@ -112,8 +125,11 @@
             }
             if (confirmacaoSenhaVar == "") {
                 console.log('confirmacaoSenha está em branco')
+            }if (idadeVar == ""){
+                console.log('Idade está em branco')
+            }if (cidadeVar = ""){
+                console.log('Cidade está em branco')
             }
-            
             return false;
         }
 
@@ -141,7 +157,8 @@
                 nomeServer: nomeVar,  
                 emailServer: emailVar,     
                 senhaServer: senhaVar,
-               
+                idadeServer: idadeVar,
+                cidadeServer: cidadeVar,
             })
         }).then(function (resposta) {
 
