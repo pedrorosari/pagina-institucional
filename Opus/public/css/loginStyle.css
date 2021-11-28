@@ -15,9 +15,10 @@
 
 /* LOGIN */
 body{
-  background-image: url(../assets/sean-pollock-PhYq704ffdA-unsplash\ \(1\).jpg);
+  background-image: url(../assets/sean-pollock-PhYq704ffdA-unsplash\ \(1\).jpg) ;
   background-size: cover;
   background-position-y: -100px ;
+ 
 }
 
 textarea:focus, input:focus{
