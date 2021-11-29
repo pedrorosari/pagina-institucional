@@ -35,16 +35,16 @@
     <ul class="nav_list">
       <li>
           <i class='bx bx-search' ></i>
-          <input type="text" placeholder="Search...">
+          <input type="text" placeholder="Pesquisa...">
         </a>
-        <span class="tooltip">Search</span>
+        <span class="tooltip">Pesquisa</span>
       </li>
       <li>
       <a href="./Cursos.html">
         <i class='bx bx-grid-alt' ></i>
-        <span class="links_name">Dashboard</span>
+        <span class="links_name">Cursos</span>
       </a>
-      <span class="tooltip">Dashboard</span>
+      <span class="tooltip">Cursos</span>
     </li>
     <li>
     <a href="./Analytics.html">
@@ -68,7 +68,7 @@
           <img src="./assets/pedro.jpg" alt="">
           <div class="name_job">
             <div class="name">Pedro Rosário</div>
-            <div class="job">Analista C6 Bank</div>
+            <div class="job">Analista </div>
           </div>
         </div>
         <a href="./index.html"> <i class='bx bx-log-out' id="log_out"></i></a>
@@ -82,10 +82,12 @@
 
 
   <div class="dash-container">
-   
+
+   <h1>Faixa etária dos usuários </h1>
     <div class="graph">
       <canvas id="chartPie" style="width: 100%; height: 100%;"></canvas>
     </div>
+    <h1>Localização dos usuários</h1>
      <div class="graph">
       <canvas id="chartBar" style="width: 100%; height: 100%;"></canvas>
     </div>
@@ -96,6 +98,7 @@
 
 <script>
   // gráfico de Barras
+  
   var ctxBar = document.getElementById("chartBar").getContext("2d");
   var rotulosBar = [ "São Paulo","Minas Gerais", "Rio de Janeiro"];
   var dataBar = [];
@@ -108,12 +111,12 @@
           label: 'Estado',
           data: dataBar, // referenciando a variável de dados para o gráfico de barras
           backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
           ],
           borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -133,11 +136,13 @@
       scales: {
         y: {
           beginAtZero: true,
+        
+
         }
       }
     }
   }
-  var ax_chartBar = new Chart(ctxBar, configBar); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
+// criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
 
   
  
@@ -154,9 +159,9 @@
          label: 'Título do Gráfico',
          data: dataPie, // referenciando a variável de dados para o gráfico de pizza/torta
          backgroundColor: [
-           '#FF000022',
-            '#FFFF0022',
-            '#FF00FF22',
+           '#FF0000',
+            '#FFFF00',
+            '#FF00FF',
             '#00FFFF22',
             '#99009922',
             '#99990022',
@@ -183,6 +188,11 @@
       scales: {
         y: {
           beginAtZero: true,
+          ticks:{
+                color: '#1b1b23'
+  
+
+          },
         }
       }
     }
@@ -236,6 +246,9 @@
         var SP = 0;
         var MG = 0;
         var RJ = 0;
+        setTimeout(function () {
+                  
+
         
         for(var i = 0; i < resposta.length; i++){
           if(resposta[i].cidade == "SP"){
@@ -253,6 +266,7 @@
 
 
                    
+                }, 1000); // Test
                 });
               } else {
               console.error('Nenhum dado encontrado ou erro na API');
