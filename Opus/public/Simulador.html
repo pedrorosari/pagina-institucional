@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./css/poslogin.css">
+  <link rel="stylesheet" href="./css/Simulador.css">
   <title>Document</title>
 </head>
 <body>
@@ -43,6 +44,13 @@
     <span class="tooltip">Analytics</span>
   </li>
   <li>
+    <a href="./Simulador.html">
+  <i class='bx bx-calculator'></i>
+  <span class="links_name">Simulador</span>
+</a>
+<span class="tooltip">Simulador</span>
+</li>
+  <li>
   <a href="#">
     <i class='bx bxs-cog' ></i>
     <span class="links_name">Configuração</span>
@@ -65,9 +73,24 @@
       </div>
     </div>
   </div>
-  <div class="home_content">
-    <div class="text">Home Content</div>
-  </div>
+ 
+
+  <!-- Calculadora -->
+
+  
+  <div class="cal-container">
+    <h1>Simulador</h1>
+        <div class="caixa">
+            <label for="Salário">Informe seu salário:</label>
+            <input id="salario_input" type="text" placeholder="R$ XXXX.XX">
+            
+            <button class="btn" onclick="calcular()">Calcular</button>
+            
+        </div>
+       <div id="div_resposta">
+           
+       </div>
+        </div>
 
 </body>
 </html>
@@ -87,4 +110,24 @@
   btn.onclick = function(){
     sidebar.classList.toggle("active")
   }
+
+
+    function calcular(){
+      var Salario = Number(salario_input.value);
+
+      if(salario_input.value == ""){
+        alert("Insira um valor valído")
+      }
+      else{
+      var Fixo = Salario * 0.50 
+      var variável = Salario * 0.30
+      var segurança = Salario * 0.20
+      div_resposta.innerHTML = `O gasto fixo que você pode ter é de 50% da sua renda, ou seja R$${Fixo} `
+      div_resposta.innerHTML += `<br>Já o gasto variável pode comprometer 30% do seu salário, ou seja R$${variável}`
+      div_resposta.innerHTML += `<br>Já com o valor restante ou pelo menos 20% da renda, ou seja R$${segurança} recomenda-se que você invista ou poupe.`
+    }
+  }
+
+
+
 </script>
