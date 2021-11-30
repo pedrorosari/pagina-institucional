@@ -65,7 +65,7 @@
           <img src="./assets/pedro.jpg" alt="">
           <div class="name_job">
             <div class="name">Pedro Rosário</div>
-            <div class="job">Analista C6 Bank</div>
+            <div class="job">Analista</div>
           </div>
         </div>
         <a href="./index.html"> <i class='bx bx-log-out' id="log_out"></i></a>
@@ -87,9 +87,10 @@
             <button class="btn" onclick="calcular()">Calcular</button>
             
         </div>
-       <div id="div_resposta">
+       <b><div id="div_resposta">
            
        </div>
+      </b>
         </div>
 
 </body>
@@ -122,9 +123,9 @@
       var Fixo = Salario * 0.50 
       var variável = Salario * 0.30
       var segurança = Salario * 0.20
-      div_resposta.innerHTML = `O gasto fixo que você pode ter é de 50% da sua renda, ou seja R$${Fixo} `
-      div_resposta.innerHTML += `<br>Já o gasto variável pode comprometer 30% do seu salário, ou seja R$${variável}`
-      div_resposta.innerHTML += `<br>Já com o valor restante ou pelo menos 20% da renda, ou seja R$${segurança} recomenda-se que você invista ou poupe.`
+      div_resposta.innerHTML = `O gasto fixo que você pode ter é de 50% da sua renda, ou seja R$${Fixo}. `
+      div_resposta.innerHTML += `<br><br>Já o gasto variável pode comprometer 30% do seu salário, ou seja R$${variável}.`
+      div_resposta.innerHTML += `<br><br>Já com o valor restante ou pelo menos 20% da renda, ou seja R$${segurança} recomenda-se que você invista ou poupe.`
     }
   }
 
